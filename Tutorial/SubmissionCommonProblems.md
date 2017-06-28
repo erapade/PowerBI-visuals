@@ -17,3 +17,5 @@ Use different types of data to check if the data labels are formatted well
 7. __Version of the visual is not increased after update__
 8. __The GUID of the visual is changed even if the visual is already published__
 The GUID of the visual can be found in package.json, css and js files of the package
+9. __Power Desktop BI usage the old code when an updated package is loaded__
+For the Power BI Desktop to use the new updated code if/while debugging/verifying using a package file, the `"guid":` parameter in the `package.json` file needs to be updated. If the same GUID is used, the new code will not be executed. When releasing the code to the main master branch, the guid can/shall be the same. Please note that the recomended way to debugg the code is to use the Developer Visual in the Power BI Service and use the `pbiviz start` command to build
